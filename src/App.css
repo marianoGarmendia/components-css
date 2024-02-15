@@ -1,0 +1,19 @@
+/* Estilizando los hovers de nav en el header */
+
+.nav-elements__menu-hidden {
+  position: absolute;
+  display: none;
+  z-index: 10;
+}
+
+.nav-elements {
+  position: relative;
+}
+
+.nav-elements:hover + .nav-elements__menu-hidden {
+  display: block;
+}
+
+.nav-elements__menu-hidden:hover {
+  display: block;
+}

@@ -1,0 +1,1 @@
+color para el interior de botones o links:    #212121
