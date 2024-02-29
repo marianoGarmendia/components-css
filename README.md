@@ -1,8 +1,9 @@
-Galeria de componentes
+# Galeria de componentes 
+### [en construcción]
 
-Tailwind y Css nativo
+> Tailwind y Css nativo 
 
-Componentes que podes encontrar y copiar para llevar a tu proyecto, ademas podes personalizarlos
+⭐ Componentes que podes encontrar y copiar para llevar a tu proyecto, ademas podes personalizarlos
 
 - Cards
 - Buttons
@@ -11,4 +12,12 @@ Componentes que podes encontrar y copiar para llevar a tu proyecto, ademas podes
 - Sliders
   y más..
 
-Desarrollado con React y Vite
+### Desarrollado con React
+
+- Libreria Monaco
+- React router
+- Custom hooks
+- SVG personalizados
+
+> En proceso de construccion a la fecha 29-02-24
+
