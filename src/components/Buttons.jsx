@@ -23,7 +23,7 @@ function Buttons() {
               <p className="z-10">Hover me!</p>
             </button>{" "}
           </div>
-          <CodeLink path={"/buttons/button-one"}>Code</CodeLink>
+          <CodeLink path={"/components-css/buttons/button-one"}>Code</CodeLink>
         </div>
         <div className="flex justify-center items-center rounded-md bg-lightGrayItem relative">
           <div className="m-auto my-8">

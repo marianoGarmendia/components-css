@@ -34,7 +34,7 @@ function Cards() {
               </ul>
             </article>
           </div>
-          <CodeLink path={"/cards/card-one"}>Code</CodeLink>
+          <CodeLink path={"/components-css/cards/card-one"}>Code</CodeLink>
         </div>
         <div className="flex justify-center items-center p-4 rounded-md bg-lightGrayItem relative">
           <div className="mx-auto ">
@@ -84,7 +84,7 @@ function Cards() {
               </div>
             </article>
           </div>
-          <CodeLink path={"/cards/card-two"}>Code</CodeLink>
+          <CodeLink path={"/components-css/cards/card-two"}>Code</CodeLink>
         </div>
 
         <div className="flex justify-center items-center p-4 rounded-md bg-lightGrayItem relative">
@@ -103,7 +103,7 @@ function Cards() {
               </div>
             </article>
           </div>
-          <CodeLink path={"/cards/card-three"}>Code</CodeLink>
+          <CodeLink path={"/components-css/cards/card-three"}>Code</CodeLink>
         </div>
       </div>
     </section>

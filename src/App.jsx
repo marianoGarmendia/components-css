@@ -72,28 +72,43 @@ function App() {
         </div>
         <div className="bg-lightGray rounded-md flex-1 p-6">
           <Routes>
-            <Route exact path="/" element={<Getting />}></Route>
+            <Route exact path="/components-css/" element={<Getting />}></Route>
 
-            <Route exact path="/cards" element={<Cards />}></Route>
             <Route
               exact
-              path="/cards/:elementName"
+              path="/components-css/cards"
+              element={<Cards />}
+            ></Route>
+            <Route
+              exact
+              path="/components-css/cards/:elementName"
               element={<ComponentCode />}
             ></Route>
-            <Route exact path="/buttons" element={<Buttons />}></Route>
             <Route
               exact
-              path="/buttons/:elementName"
+              path="/components-css/buttons"
+              element={<Buttons />}
+            ></Route>
+            <Route
+              exact
+              path="/components-css/buttons/:elementName"
               element={<ComponentCode />}
             ></Route>
-            <Route exact path="/forms" element={<Forms />}></Route>
             <Route
               exact
-              path="/forms/:elementName"
+              path="/components-css/forms"
+              element={<Forms />}
+            ></Route>
+            <Route
+              exact
+              path="/components-css/forms/:elementName"
               element={<ComponentCode />}
             ></Route>
 
-            <Route path="/getting-started" element={<Getting />}></Route>
+            <Route
+              path="/components-css/getting-started"
+              element={<Getting />}
+            ></Route>
           </Routes>
         </div>
       </main>
