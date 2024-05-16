@@ -13,19 +13,19 @@ function ElementsMenu() {
   return (
     <div className="p-4 bg-lightGrayItem rounded-md flex flex-col text-xs gap-2">
       <Link
-        to="/components-css/buttons"
+        to="/buttons"
         className="bg-lightGray px-4 py-2 rounded-md shadow-md hover:bg-lightGrayPlus font-bold"
       >
         Buttons
       </Link>
       <Link
-        to="/components-css/cards"
+        to="/cards"
         className="bg-lightGray px-4 py-2 rounded-md shadow-md hover:bg-lightGrayPlus font-bold"
       >
         Cards
       </Link>
       <Link
-        to="/components-css/forms"
+        to="/forms"
         className="bg-lightGray px-4 py-2 rounded-md shadow-md hover:bg-lightGrayPlus font-bold"
       >
         Forms
@@ -65,50 +65,35 @@ function App() {
             <h3 className="text-2xl">Components</h3>
           </div>
           <div className="flex flex-col gap-2 my-4">
-            <LinkMenu path={"/components-css/cards"}>Cards</LinkMenu>
-            <LinkMenu path={"/components-css/buttons"}>Buttons</LinkMenu>
-            <LinkMenu path={"/components-css/forms"}>Forms</LinkMenu>
+            <LinkMenu path={"/cards"}>Cards</LinkMenu>
+            <LinkMenu path={"/buttons"}>Buttons</LinkMenu>
+            <LinkMenu path={"/forms"}>Forms</LinkMenu>
           </div>
         </div>
         <div className="bg-lightGray rounded-md flex-1 p-6">
           <Routes>
-            <Route exact path="/components-css/" element={<Getting />}></Route>
+            <Route exact path="/" element={<Getting />}></Route>
 
+            <Route exact path="/cards" element={<Cards />}></Route>
             <Route
               exact
-              path="/components-css/cards"
-              element={<Cards />}
-            ></Route>
-            <Route
-              exact
-              path="/components-css/cards/:elementName"
+              path="/cards/:elementName"
               element={<ComponentCode />}
             ></Route>
+            <Route exact path="/buttons" element={<Buttons />}></Route>
             <Route
               exact
-              path="/components-css/buttons"
-              element={<Buttons />}
-            ></Route>
-            <Route
-              exact
-              path="/components-css/buttons/:elementName"
+              path="/buttons/:elementName"
               element={<ComponentCode />}
             ></Route>
+            <Route exact path="/forms" element={<Forms />}></Route>
             <Route
               exact
-              path="/components-css/forms"
-              element={<Forms />}
-            ></Route>
-            <Route
-              exact
-              path="/components-css/forms/:elementName"
+              path="/forms/:elementName"
               element={<ComponentCode />}
             ></Route>
 
-            <Route
-              path="/components-css/getting-started"
-              element={<Getting />}
-            ></Route>
+            <Route path="/getting-started" element={<Getting />}></Route>
           </Routes>
         </div>
       </main>

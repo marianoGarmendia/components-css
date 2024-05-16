@@ -102,7 +102,7 @@ function Forms() {
               </button>
             </form>
           </div>
-          <CodeLink path={"/components-css/forms/form-two"}>Code</CodeLink>
+          <CodeLink path={"/forms/form-two"}>Code</CodeLink>
         </div>
       </div>
     </section>
