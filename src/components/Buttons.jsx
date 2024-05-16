@@ -57,7 +57,7 @@ function Buttons() {
               </svg>
             </button>
           </div>
-          <CodeLink path={"/buttons/button-two"}>Code</CodeLink>
+          <CodeLink path={"/components-css/buttons/button-two"}>Code</CodeLink>
         </div>
       </div>
     </section>
