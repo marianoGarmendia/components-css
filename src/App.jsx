@@ -1,7 +1,9 @@
 // import { useState } from "react";
 import { Routes, Route, Link } from "react-router-dom";
 import Cards from "./components/Cards";
-import CardCode from "./components/CardCode";
+import ComponentCode from "./ComponentHelpers/ComponentCode";
+import LinkMenu from "./ComponentHelpers/LinkMenu";
+import Forms from "./components/Forms";
 
 import Buttons from "./components/Buttons";
 import Getting from "./menu/Getting";
@@ -9,7 +11,7 @@ import "./App.css";
 
 function ElementsMenu() {
   return (
-    <div className="p-4 bg-slate-500 rounded-md flex flex-col gap-2">
+    <div className="p-4 bg-lightGrayItem rounded-md flex flex-col text-xs gap-2">
       <Link
         to="/buttons"
         className="bg-lightGray px-4 py-2 rounded-md shadow-md hover:bg-lightGrayPlus font-bold"
@@ -21,6 +23,12 @@ function ElementsMenu() {
         className="bg-lightGray px-4 py-2 rounded-md shadow-md hover:bg-lightGrayPlus font-bold"
       >
         Cards
+      </Link>
+      <Link
+        to="/forms"
+        className="bg-lightGray px-4 py-2 rounded-md shadow-md hover:bg-lightGrayPlus font-bold"
+      >
+        Forms
       </Link>
     </div>
   );
@@ -57,18 +65,9 @@ function App() {
             <h3 className="text-2xl">Components</h3>
           </div>
           <div className="flex flex-col gap-2 my-4">
-            <Link to="/cards" className="bg-lightGray px-4 py-2 rounded-md ">
-              Cards
-            </Link>
-            <Link to="/buttons" className="bg-lightGray px-4 py-2 rounded-md ">
-              Buttons
-            </Link>
-            <Link to="/navbar" className="bg-lightGray px-4 py-2 rounded-md ">
-              Navbar
-            </Link>
-            <Link to="/footers" className="bg-lightGray px-4 py-2 rounded-md ">
-              footers
-            </Link>
+            <LinkMenu path={"/cards"}>Cards</LinkMenu>
+            <LinkMenu path={"/buttons"}>Buttons</LinkMenu>
+            <LinkMenu path={"/forms"}>Forms</LinkMenu>
           </div>
         </div>
         <div className="bg-lightGray rounded-md flex-1 p-6">
@@ -79,13 +78,19 @@ function App() {
             <Route
               exact
               path="/cards/:elementName"
-              element={<CardCode />}
+              element={<ComponentCode />}
             ></Route>
             <Route exact path="/buttons" element={<Buttons />}></Route>
             <Route
               exact
               path="/buttons/:elementName"
-              element={<CardCode />}
+              element={<ComponentCode />}
+            ></Route>
+            <Route exact path="/forms" element={<Forms />}></Route>
+            <Route
+              exact
+              path="/forms/:elementName"
+              element={<ComponentCode />}
             ></Route>
 
             <Route path="/getting-started" element={<Getting />}></Route>

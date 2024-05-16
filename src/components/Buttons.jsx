@@ -1,5 +1,5 @@
 import TailwindLogo from "../assets/TailwindLogo";
-import CodeLink from "./CodeLink";
+import CodeLink from "../ComponentHelpers/CodeLink";
 
 function Buttons() {
   return (

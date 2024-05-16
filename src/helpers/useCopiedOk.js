@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { CopiedMessage } from "../components/CopiedMsj";
+import { CopiedMessage } from "../ComponentHelpers/CopiedMsj";
 
 export function useCopiedOk() {
   const [copied, setCopied] = useState(false);

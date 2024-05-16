@@ -1,12 +1,12 @@
 import { useEffect, useRef, useState } from "react";
-import { useParams, Link, Outlet } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { filesElements } from "../filesElements/filesElement";
 
 import CardsElement from "./CardsElement";
 import Editor from "@monaco-editor/react";
 import { useCopiedOk } from "../helpers/useCopiedOk";
 
-function CardCode() {
+function ComponentCode() {
   const { elementName } = useParams();
   const [fileName, setFileName] = useState(elementName);
   const [card, setCard] = useState("");
@@ -18,13 +18,9 @@ function CardCode() {
     setFileName(elementName);
   }, [elementName]);
 
-  function writeCard() {
-    setCard(editorRef.current.getValue());
-  }
-
   function handleEditorDidMount(editor) {
     editorRef.current = editor;
-    writeCard();
+    setCard(editorRef.current.getValue());
   }
 
   function getValueEditor() {
@@ -35,15 +31,15 @@ function CardCode() {
   // New functionality
   // Botones que permitan cambiar el editor para obtener el codigo css o en tailwind
   return (
-    <div className="flex flex-col gap-10 md:flex-row">
-      <div className="flex flex-col items-start gap-2 w-full ">
+    <div className="flex flex-col gap-10 md:flex-row h-[100%]">
+      <div className="flex flex-col items-start gap-2 w-full h-fit ">
         <Editor
           width="100%"
           height="300px"
           theme="vs-dark"
           onMount={handleEditorDidMount}
-          onChange={() => {
-            writeCard();
+          onChange={(value) => {
+            setCard(value);
           }}
           path={file.name}
           language={file.language}
@@ -62,9 +58,9 @@ function CardCode() {
           {copied && <CopiedMessage />}
         </div>
       </div>
-      <div className="w-full ">{CardsElement(card)}</div>
+      <div className="w-full h-full">{CardsElement(card)}</div>
     </div>
   );
 }
 
-export default CardCode;
+export default ComponentCode;

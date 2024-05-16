@@ -1,4 +1,4 @@
-import CodeLink from "./CodeLink";
+import CodeLink from "../ComponentHelpers/CodeLink";
 import TailwindLogo from "../assets/TailwindLogo";
 
 function Cards() {
@@ -12,7 +12,7 @@ function Cards() {
         className="p-2 rounded-md w-full gap-4"
         style={{
           display: "grid",
-          gridTemplateColumns: "repeat(auto-fit , minmax(250px, 1fr))", // CUANDO HAYA MAS CARDS PONER AUTO-FIT
+          gridTemplateColumns: "repeat( auto-fit , minmax(250px, 1fr))", // CUANDO HAYA MAS CARDS PONER AUTO-FIT
         }}
       >
         <div className="flex justify-center items-center p-4 rounded-md bg-lightGrayItem relative">
@@ -85,6 +85,25 @@ function Cards() {
             </article>
           </div>
           <CodeLink path={"/cards/card-two"}>Code</CodeLink>
+        </div>
+
+        <div className="flex justify-center items-center p-4 rounded-md bg-lightGrayItem relative">
+          <div className="mx-auto">
+            <article className="rounded-md h-52 bg-purple-700 w-36 overflow-hidden group">
+              <div className="w-full h-full bg-slate-100 rounded-md translate-x-3/4 group-hover:translate-x-2 transition-all duration-500 ease-in-out delay-100 flex">
+                <div className="text-slate-900 pl-2 group-hover:invisible transition-all duration-300 ease-in-out">
+                  {"<"}
+                </div>
+                <div className="px-2 flex flex-col text-black translate-x-4 group-hover:translate-x-0 transition-all duration-500 ease-in-out delay-100">
+                  <h3 className="my-4 font-bold text-lg">Some title</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  </p>
+                </div>
+              </div>
+            </article>
+          </div>
+          <CodeLink path={"/cards/card-three"}>Code</CodeLink>
         </div>
       </div>
     </section>

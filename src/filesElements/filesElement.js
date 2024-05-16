@@ -22,7 +22,7 @@ export const filesElements = {
   "card-two": {
     name: "card-two",
     language: "html",
-    value: `<article class="bg-slate-50 rounded-md p-4 flex-1 flex items-center gap-2">
+    value: `<article class="bg-slate-50 rounded-md p-4  flex items-center gap-2">
     <div class="w-fit p-2 hover:bg-blue-600 rounded-full  ease-in-out transition-all duration-500 hover:cursor-pointer group ">
       <svg
         viewBox="0 0 15 15"
@@ -68,6 +68,27 @@ export const filesElements = {
     </div>
   </article>`,
   },
+  "card-three": {
+    name: "card-three",
+    language: "html",
+    value: `
+    
+            <article class="rounded-md h-52 bg-purple-700 w-36 overflow-hidden group">
+              <div class="w-full h-full bg-slate-100 rounded-md translate-x-3/4 group-hover:translate-x-2 transition-all duration-500 ease-in-out delay-100 flex">
+                <div class="text-slate-900 pl-2 group-hover:invisible transition-all duration-300 ease-in-out">
+                  <
+                </div>
+                <div class="px-2 flex flex-col text-black translate-x-4 group-hover:translate-x-0 transition-all duration-500 ease-in-out delay-100">
+                  <h3 class="my-4 font-bold text-lg">Some title</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  </p>
+                </div>
+              </div>
+            </article>
+          
+    `,
+  },
   "button-one": {
     name: "button-one",
     language: "html",
@@ -112,6 +133,93 @@ C91.832,93.807,95.189,97.164,99.332,97.164z"
       </g>
     </svg>
   </button>
+    `,
+  },
+  "form-one": {
+    name: "form-one",
+    language: "html",
+    value: `
+    <form
+    class="flex flex-col justify-center items-center bg-lightGray rounded-md p-4 "
+    
+  >
+    <h3 class="text-2xl mb-4 ">
+      Title <span class="text-yellow-400">App</span>
+    </h3>
+    <h4 class="text-[#eee] mb-4">Registrate</h4>
+    <input
+      class="p-2 rounded-md border border-[#171717] mb-4 focus:outline-none focus:ring-1 focus:ring-yellow-400 border-none bg-lightGrayPlus"
+      type="text"
+      name=""
+      id=""
+      placeholder="Tu nombre aqui..."
+    />
+    <input
+      class="p-2 rounded-md border border-[#171717] mb-4 focus:outline-none focus:ring-1 focus:ring-yellow-400 border-none bg-lightGrayPlus"
+      type="text"
+      name=""
+      id=""
+      placeholder="Apellido..."
+    />
+    <input
+      class="p-2 rounded-md border border-[#171717] mb-4 focus:outline-none focus:ring-1 focus:ring-yellow-400 border-none bg-lightGrayPlus"
+      type="email"
+      name=""
+      id=""
+      placeholder="correo@correo..."
+    />
+    <div class="flex gap-1 mb-8">
+      <label class="text-xs">
+        Acepto los terminos y condiciones
+      </label>
+      <input type="checkbox" />
+    </div>
+    <button class="bg-yellow-400 text-[#171717] font-bold p-2 w-full rounded-md hover:bg-yellow-300 active:scale-95 transition-all ease-in-out duration-300">
+      Enviar
+    </button>
+  </form>
+    `,
+  },
+  "form-two": {
+    name: "form-two",
+    language: "html",
+    value: `
+    <form class="flex justify-center flex-col items-center bg-[#171717] px-6 rounded-md">
+    <div class="my-4 flex justify-center flex-col items-center">
+      <h2 class="text-xl font-bold my-4 text-indigo-600">
+        Crear workout
+      </h2>
+      <select
+        class="bg-[#212121] p-2 my-2 rounded-md shadow-md"
+        name="crearWod"
+        id=""
+      >
+        <option value="crossfit">Crossfit</option>
+        <option value="functional">Functional</option>
+        <option value="high">High Intensity</option>
+        <option value="woman">Woman Strong</option>
+        <option value="intense">Intense Functional</option>
+        <option value="power">Power Woman</option>
+        <option value="full">Full Body</option>
+      </select>
+      <input
+        type="date"
+        class="rounded-md w-full text-[#17171780] p-1"
+        placeholder="Fecha..."
+      />
+    </div>
+    <textarea
+      placeholder="Ej: Amrap 18'..."
+      class="text-black p-4 rounded-md"
+      type="text"
+      id=""
+      cols="20"
+      rows="5"
+    ></textarea>
+    <button class="my-4 font-semibold tracking-wide focus:scale-100 focus:bg-[#eee] focus:text-[#171717] p-2 rounded-md  hover:scale-105 ease-in-out duration-200 cursor-pointer bg-[#212121] m-2 w-full">
+      Enviar
+    </button>
+  </form>
     `,
   },
 };
