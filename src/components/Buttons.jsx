@@ -59,6 +59,16 @@ function Buttons() {
           </div>
           <CodeLink path={"/buttons/button-two"}>Code</CodeLink>
         </div>
+        <div className="flex justify-center items-center rounded-md bg-lightGrayItem relative">
+          <div className="m-auto my-8">
+            {" "}
+            <button className="bg-gray-700 text-white p-4 rounded-md hover:scale-105 group transition-all duration-150 relative overflow-hidden flex active:scale-100 ">
+              <div className="absolute rounded-full bg-red-500 w-48 h-48 scale-0 group-hover:scale-150  transition-all duration-500  ease-in-out group-hover:-translate-x-5   "></div>
+              <p className="z-10">Hover me!</p>
+            </button>
+          </div>
+          <CodeLink path={"/buttons/button-three"}>Code</CodeLink>
+        </div>
       </div>
     </section>
   );

@@ -135,6 +135,16 @@ C91.832,93.807,95.189,97.164,99.332,97.164z"
   </button>
     `,
   },
+  "button-three": {
+    name: "button-three",
+    language: "html",
+    value: `
+    <button class="bg-gray-700 text-white p-4 rounded-md hover:scale-105 group transition-all duration-150 relative overflow-hidden flex active:scale-100 ">
+    <div class="absolute rounded-full bg-red-500 w-48 h-48 scale-0 group-hover:scale-150  transition-all duration-500  ease-in-out       group-hover:-translate-x-5   "></div>
+      <p class="z-10">Hover me!</p>
+    </button>
+    `,
+  },
   "form-one": {
     name: "form-one",
     language: "html",
