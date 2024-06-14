@@ -232,4 +232,16 @@ C91.832,93.807,95.189,97.164,99.332,97.164z"
   </form>
     `,
   },
+  "bar-progress": {
+    name: "bar-progress",
+    language: "html",
+    value: `
+      <div class="mx-auto flex flex-col items-center justify-center gap-3">
+        <div class="w-[200px] h-2 bg-white rounded-md">
+          <div class="w-1/2 bg-slate-800 h-full rounded-md"></div>
+        </div>
+        <span class="text-slate-800">50%</span>
+      </div>
+    `,
+  },
 };

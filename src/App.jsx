@@ -4,6 +4,7 @@ import Cards from "./components/Cards";
 import ComponentCode from "./ComponentHelpers/ComponentCode";
 import LinkMenu from "./ComponentHelpers/LinkMenu";
 import Forms from "./components/Forms";
+import Random from "./components/Random";
 
 import Buttons from "./components/Buttons";
 import Getting from "./menu/Getting";
@@ -29,6 +30,12 @@ function ElementsMenu() {
         className="bg-lightGray px-4 py-2 rounded-md shadow-md hover:bg-lightGrayPlus font-bold"
       >
         Forms
+      </Link>
+      <Link
+        to="/random"
+        className="bg-lightGray px-4 py-2 rounded-md shadow-md hover:bg-lightGrayPlus font-bold"
+      >
+        Random
       </Link>
     </div>
   );
@@ -68,6 +75,7 @@ function App() {
             <LinkMenu path={"/cards"}>Cards</LinkMenu>
             <LinkMenu path={"/buttons"}>Buttons</LinkMenu>
             <LinkMenu path={"/forms"}>Forms</LinkMenu>
+            <LinkMenu path={"/random"}>Random</LinkMenu>
           </div>
         </div>
         <div className="bg-lightGray rounded-md flex-1 p-6">
@@ -90,6 +98,12 @@ function App() {
             <Route
               exact
               path="/forms/:elementName"
+              element={<ComponentCode />}
+            ></Route>
+            <Route exact path="/random" element={<Random />}></Route>
+            <Route
+              exact
+              path="/random/:elementName"
               element={<ComponentCode />}
             ></Route>
 
